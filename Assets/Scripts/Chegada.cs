@@ -2,27 +2,56 @@ using UnityEngine;
 using TMPro;
 public class Chegada : MonoBehaviour
 {
-    public TextMeshProUGUI TextoFinal;
-    public GameObject Reset;
-    
+    public TextMeshProUGUI textoVitoria;
+    public GameObject ResetButton;
+    public GameObject NextLevelButton;              // opcional: se vazio no Inspector, é ignorado em todo o script
+
     void Start()                                    // faz a primeira configuração inicial dos objetos e componentes
     {
-        TextoFinal.enabled = false;                 // no início, o componente TextoFinal tem que ficar escondido 
-        Reset.SetActive(false);                     // no início, o objeto Reset inteiro não pode existir  
+        textoVitoria.enabled = false;               // no início, o componente textoVitoria tem que ficar escondido 
+
+        ResetButton.SetActive(false);               // no início, o objeto ResetButton inteiro não deve estar ativo na cena
+
+        if (NextLevelButton != null)                // só executa se o objeto existir no Inspector
+        {
+            NextLevelButton.SetActive(false);       // no início (caso exista), o objeto NextLevelButton inteiro não deve estar ativo na cena 
+        }                                                                                               
     }
     void OnTriggerEnter()                           // quando personagem atinge Chegada, esse evento dispara
     {
-        TextoFinal.enabled = true;                  // personagem na Chegada significa: mostrar mensagem de fim/vitória na tela
-        Reset.SetActive(true);                      // personagem na Chegada significa: mostrar objeto Reset na tela, pro personagem voltar ao início do labirinto
+        textoVitoria.enabled = true;                // personagem na Chegada vê mensagem de fim/vitória na tela
+        ResetButton.SetActive(true);                // personagem na Chegada vê objeto ResetButton na tela (que faz o personagem retornar ao início do labirinto)
+
+        if (NextLevelButton != null)                // só executa se o objeto existir no Inspector
+            NextLevelButton.SetActive(true);
     }
     public void ResetUI()                           // controla a visibilidade do objeto Reset  
     {
-        TextoFinal.enabled = false;                 // botão Reset clicado significa: remova mensagem de fim/vitória na tela
-        Reset.SetActive(false);                     // botão Reset clicado significa: objeto Reset já foi clicado e cumpriu sua função, e já pode desaparecer da tela.
-    }
+        textoVitoria.enabled = false;               // botão ResetButton clicado significa: remova mensagem de fim/vitória na tela
+        ResetButton.SetActive(false);               // botão ResetButton clicado significa: objeto ResetButton já foi clicado e cumpriu sua função, e já pode desaparecer da tela.
+
+        if (NextLevelButton != null)                // só executa se o objeto existir no Inspector
+            NextLevelButton.SetActive(false);
+    }    
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// (Versões antigas abaixo funcionavam com um único botão de Reset...)
 
 /*  =======  Versão 2, mais enxuta  =======
  

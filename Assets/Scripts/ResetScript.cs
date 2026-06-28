@@ -4,7 +4,7 @@ public class ResetScript : MonoBehaviour
 {
     public GameObject player;                           // representa nosso personagem
     public GameObject final;                            // representa o ponto final de Chegada
-    Vector3 inicial;                                    // variável que irá guardar uma dada posição 
+    Vector3 inicial;                                    // variável que irá guardar uma dada posição     
     
     void Start()
     {

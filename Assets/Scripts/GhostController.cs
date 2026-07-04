@@ -4,50 +4,56 @@ using UnityEngine;
 public class GhostController : MonoBehaviour
 {
     [Header("Referências")]
-    public Transform player;
+    public Transform player;                                    // referência de posição (para quem o inimigo vai olhar)
 
-    [Header("Movimento")]
-    public float velocidade = 2f;
-    public float distanciaLimiteParaPlayer = 0.5f;
+    [Header("Movimento")]                                       
+    public float velocidade = 2f;                               // velocidade do inimigo
+    public float distanciaLimiteParaPlayer = 0.5f;              // distância mínima que o inimigo deve se manter do centro do player    
 
-    [Header("Posição Y")]
-    public float alturaY = 1.85f;
+    [Header("Posição Y")]                                       
+    public float alturaY = 1.85f;                               // altura inicial do fantasma em relação ao chão
 
     private void Start()
     {
-        transform.position = new Vector3(transform.position.x, alturaY, transform.position.z);
+        transform.position = new Vector3(transform.position.x, alturaY, transform.position.z);          // altura inicial aplicada logo no começo do jogo
     }
 
     void Update()
     {
-        MoverFantasma();
+        MoverFantasma();                                                                // método usado abaixo    
+        // SeguirPlayer();                                                              // método alternativo (escolha um dos dois métodos para ser comentado) 
     }
 
     void MoverFantasma()
     {
+     
+        Vector3 direcao = player.position - transform.position;                         // vetor que representa a distância entre o player e o inimigo
 
-        Vector3 direcao = player.position - transform.position;
+        direcao.y = 0f;                                                                 // vetor direção: coordenada 3D no espaço. O eixo y zerado significa que nos interessa só o que ocorre no plano XZ.
 
-        direcao.y = 0f;
+        float distancia = direcao.magnitude;                                            // distancia recebe o valor do módulo (comprimento) do vetor direção.
 
-        float distancia = direcao.magnitude;
+        if (distancia <= distanciaLimiteParaPlayer)                                     // se a distancia entre o jogador e o inimigo for menor que distanciaLimiteParaPlayer, não se faz mais nada.
+            return;                                                                     // assim, inimigo ficará parado, em vez de tentar continuar a se mover e avançar sobre o player.
 
-        if (distancia <= distanciaLimiteParaPlayer)
-            return;
+        // ===== Movimento ======
 
-        transform.position += direcao.normalized * velocidade * Time.deltaTime;
+        transform.position += direcao.normalized * velocidade * Time.deltaTime;         // posição do inimigo: vetor unitário de Direção X Velocidade X Tempo
 
-        // Rotação
+        // ===== Rotação ========
 
-        transform.LookAt(
-            new Vector3(
+        transform.LookAt(                                                               // LookAt: "para onde o inimigo olha".
+            new Vector3(                                                                // O inimigo se volta para um outra coordenada 3D, dada pela posição do player no lano XZ e a altura Y do inimigo na cena.
                 player.position.x,
                 transform.position.y,   
                 player.position.z));        
 
-        transform.Rotate(0, 0, 0);
+        // transform.Rotate(0, 0, 0);                                                   // comando para rotacionar comentado porque o combo "movimento + rotação" mais acima já resolve a questão.
     }
 }
+
+
+    // ============ OUTRA FORMA DE FAZER: =================
 
     /*
     void SeguirPlayer()

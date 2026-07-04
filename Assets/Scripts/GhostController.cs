@@ -10,6 +10,14 @@ public class GhostController : MonoBehaviour
     public float velocidade = 2f;
     public float distanciaLimiteParaPlayer = 0.5f;
 
+    [Header("Posição Y")]
+    public float alturaY = 1.85f;
+
+    private void Start()
+    {
+        transform.position = new Vector3(transform.position.x, alturaY, transform.position.z);
+    }
+
     void Update()
     {
         MoverFantasma();
@@ -17,9 +25,31 @@ public class GhostController : MonoBehaviour
 
     void MoverFantasma()
     {
-        SeguirPlayer();
-    }
 
+        Vector3 direcao = player.position - transform.position;
+
+        direcao.y = 0f;
+
+        float distancia = direcao.magnitude;
+
+        if (distancia <= distanciaLimiteParaPlayer)
+            return;
+
+        transform.position += direcao.normalized * velocidade * Time.deltaTime;
+
+        // Rotação
+
+        transform.LookAt(
+            new Vector3(
+                player.position.x,
+                transform.position.y,   
+                player.position.z));        
+
+        transform.Rotate(0, 0, 0);
+    }
+}
+
+    /*
     void SeguirPlayer()
     {
         Vector3 direcao = player.position - transform.position;
@@ -43,6 +73,8 @@ public class GhostController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, angulo + 90f, 0);
         // transform.rotation = Quaternion.Euler(0, angulo - 90f, 0);
         // transform.rotation = Quaternion.Euler(0, angulo + 180f, 0);
+
+
     }
 }
 

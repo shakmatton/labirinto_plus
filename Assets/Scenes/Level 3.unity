@@ -1037,9 +1037,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1077357001835837674, guid: e5a1ff5a589285744bace72d86a259ef, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1302709163892648474}
-    - targetCorrespondingSourceObject: {fileID: 1077357001835837674, guid: e5a1ff5a589285744bace72d86a259ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1302709163892648473}
   m_SourcePrefab: {fileID: 100100000, guid: e5a1ff5a589285744bace72d86a259ef, type: 3}
@@ -1149,7 +1146,6 @@ GameObject:
   - component: {fileID: 757021704}
   - component: {fileID: 757021703}
   - component: {fileID: 757021706}
-  - component: {fileID: 757021707}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1367,21 +1363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 757021698}
   final: {fileID: 1664817360}
---- !u!114 &757021707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757021698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fafa50b1ba01085469c2ac48aeb616c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Contato
-  renderersQueDesaparecem: []
-  alphaInvisivel: 0.15
-  duracaoFade: 2
 --- !u!1001 &759586089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5054,22 +5035,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1302709163892648474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077357001200244199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fafa50b1ba01085469c2ac48aeb616c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GhostVisibilidade
-  renderersQueDesaparecem:
-  - {fileID: 9128424506411127939}
-  alphaInvisivel: 0.15
-  duracaoFade: 2
 --- !u!1001 &8000827856028857401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5159,11 +5124,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5423646162082778802, guid: cbdc8752bfd987a4f8d32a136c48c711, type: 3}
   m_PrefabInstance: {fileID: 8000827856028857401}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &9128424506411127939 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 9128424506853783950, guid: e5a1ff5a589285744bace72d86a259ef, type: 3}
-  m_PrefabInstance: {fileID: 644246797}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

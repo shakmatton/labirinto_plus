@@ -53,6 +53,10 @@ public class GhostController : MonoBehaviour
 }
 
 
+
+
+
+
     // ============ OUTRA FORMA DE FAZER: =================
 
     /*

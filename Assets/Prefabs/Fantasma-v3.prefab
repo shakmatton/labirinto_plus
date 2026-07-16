@@ -66,8 +66,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6907490160276133464, guid: f37cc9b77fca32f458638294ee2e76de, type: 3}
-  - {fileID: 4680423775715792296, guid: f37cc9b77fca32f458638294ee2e76de, type: 3}
+  - {fileID: 2100000, guid: a345555bbf3fc27419ae84f92fa341fa, type: 2}
+  - {fileID: 2100000, guid: 44535efb5fac5f146a0cead4f019e172, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,8 +162,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4289761454266674194, guid: f37cc9b77fca32f458638294ee2e76de, type: 3}
-  - {fileID: 2215834503641885226, guid: f37cc9b77fca32f458638294ee2e76de, type: 3}
+  - {fileID: 2100000, guid: 6dcc60ab3ca1c05429671caa99524507, type: 2}
+  - {fileID: 2100000, guid: d68b2ad737b540f45a3a87a3c7eea219, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -275,7 +275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -856520325588173430, guid: f37cc9b77fca32f458638294ee2e76de, type: 3}
+  - {fileID: 2100000, guid: 365d29503db7ef748b2e1f883ff704d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -309,6 +309,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1189549550843935496}
   - component: {fileID: 465528301361539210}
+  - component: {fileID: 7084738559088357092}
+  - component: {fileID: 1302709164322178837}
   m_Layer: 0
   m_Name: Fantasma-v3
   m_TagString: Untagged
@@ -348,6 +350,42 @@ MonoBehaviour:
   velocidade: 2
   distanciaLimiteParaPlayer: 0.5
   alturaY: 1.85
+--- !u!114 &7084738559088357092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077357001835837674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafa50b1ba01085469c2ac48aeb616c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostVisibilidade
+  corpoFantasma: {fileID: 9128424506853783950}
+  alphaInvisivel: 0
+  duracaoFade: 0.5
+--- !u!65 &1302709164322178837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077357001835837674}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.736775, y: 1.7457464, z: 2.6221912}
+  m_Center: {x: -0.008063436, y: -0.0061126947, z: -0.21439838}
 --- !u!1 &1200701420286018399
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +452,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4479371216401929789, guid: f37cc9b77fca32f458638294ee2e76de, type: 3}
+  - {fileID: 2100000, guid: e5e82c95e57cbf64a93814c7665b4cbf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -504,8 +542,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6907490160276133464, guid: f37cc9b77fca32f458638294ee2e76de, type: 3}
-  - {fileID: 4680423775715792296, guid: f37cc9b77fca32f458638294ee2e76de, type: 3}
+  - {fileID: 2100000, guid: a345555bbf3fc27419ae84f92fa341fa, type: 2}
+  - {fileID: 2100000, guid: 44535efb5fac5f146a0cead4f019e172, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

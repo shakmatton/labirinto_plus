@@ -19,7 +19,7 @@ public class NextLevel : MonoBehaviour
         SceneManager.LoadScene(nextLevelName);          // simplesmente carrega a nova cena. Note que LoadScene() por padrão é assíncrona na prática — ela destrói os objetos da cena atual.
                                                         // Por quê isso funciona? Cada cena tem seu próprio player na posição inicial e sua própria Chegada com UI oculta. Não há nada para resetar manualmente.
 
-    // Caso houvesse mais linhas após ela, elas tentariam acessar objetos que já não existem (ou estão sendo destruídos), o que causaria o erro no Update() de MovimentaçãoPlayer.
+    // Caso houvesse mais linhas após ela, elas tentariam acessar objetos que já não existem (ou estão sendo destruídos), o que causaria o erro no Update() de MovePlayer.
     // Assim, não é necessário resetar nem a posição nem a UI aqui — a nova cena já inicializa tudo pelo Start() dos seus scripts.
 
     }

@@ -26,6 +26,7 @@ public class Chegada : MonoBehaviour
             NextLevelButton.SetActive(false);       // no início (caso exista), o objeto NextLevelButton inteiro não deve estar ativo na cena 
         }                                                                                               
     }
+
     private void OnTriggerEnter(Collider other)     // quando alguém atinge a Chegada, esse evento dispara
     {
         if (!other.CompareTag("Player")) return;    // se esse alguém NÃO for o Player, ignora e sai do método. Mas se for o player, as próximas linhas desse método são executadas.
@@ -38,6 +39,15 @@ public class Chegada : MonoBehaviour
         if (NextLevelButton != null)                // só executa se o objeto existir no Inspector
             NextLevelButton.SetActive(true);
     }
+
+    public void EsconderTelaVitoria()          // esconde a tela de You Win (chamado quando o player morre DEPOIS de já ter vencido)
+    {
+        textoTitulo.enabled = false;
+        ResetButton.SetActive(false);
+        if (NextLevelButton != null)
+            NextLevelButton.SetActive(false);
+    }
+
     public void ResetUI()                           // controla a visibilidade do objeto Reset  
     {
         GhostController.jogoVencido = false;        // reset da fase também libera a movimentação dos fantasmas de novo (ver explicação no método Start).

@@ -16,9 +16,17 @@ public class GhostController : MonoBehaviour
     public static bool jogoVencido = false;                     // se o jogo não está vencido, fantasmas se movem
                                                                 // variável "static" pertence à classe GhostController, geradora dos objetos fantasma (uma alteração aqui refletirá em todos os prefabs fantasmas).
 
+    private Vector3 posicaoInicial;                             // variável que irá salvar a posição inicial do fantasma
+
     private void Start()
     {
         transform.position = new Vector3(transform.position.x, alturaY, transform.position.z);          // altura inicial aplicada logo no começo do jogo
+        posicaoInicial = transform.position;                    // posição inicial do fantasma salva
+    }
+
+    public void ResetPosicao()                                  // devolve o fantasma para onde ele nasceu
+    {
+        transform.position = posicaoInicial;                    // posição do fantasma volta a ser a posição que era dele no início do jogo
     }
 
     private void Update()

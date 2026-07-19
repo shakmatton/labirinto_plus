@@ -12,7 +12,7 @@ public class GhostVisibilidade : MonoBehaviour
     private int paredesTocando = 0;                    // contador: quantas paredes o fantasma está tocando agora
     private Coroutine fadeEmAndamento;                 // guarda a coroutine ativa, para poder cancelar se precisar
 
-    void Start()
+    private void Start()
     {
         Color cor = corpoFantasma.material.color;
         cor.a = 1f;                                    // começa 100% visível
@@ -41,7 +41,7 @@ public class GhostVisibilidade : MonoBehaviour
         }
     }
 
-    void IniciarFade(float alphaAlvo)
+    private void IniciarFade(float alphaAlvo)
     {
         if (fadeEmAndamento != null)
             StopCoroutine(fadeEmAndamento);             // cancela um fade anterior, se estiver rolando, para começar o novo do ponto atual
@@ -49,7 +49,7 @@ public class GhostVisibilidade : MonoBehaviour
         fadeEmAndamento = StartCoroutine(FadeParaAlpha(alphaAlvo));
     }
 
-    IEnumerator FadeParaAlpha(float alphaAlvo)
+    private IEnumerator FadeParaAlpha(float alphaAlvo)
     {
         float tempoDecorrido = 0f;
         float alphaInicial = corpoFantasma.material.color.a;

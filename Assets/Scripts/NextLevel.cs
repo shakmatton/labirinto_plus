@@ -9,7 +9,7 @@ public class NextLevel : MonoBehaviour
     
     public string nextLevelName;
 
-    void Start()
+    private void Start()
     {
         inicial = player.transform.position;            // logo no começo, já salvamos a posição de início do personagem
     }

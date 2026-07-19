@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Parede
+  - Fantasma
   layers:
   - Default
   - TransparentFX

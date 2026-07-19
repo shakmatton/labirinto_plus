@@ -1214,7 +1214,7 @@ GameObject:
   - component: {fileID: 757021707}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1308,7 +1308,7 @@ Transform:
   m_GameObject: {fileID: 757021698}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.17, y: 1.05, z: -0.44}
+  m_LocalPosition: {x: -46.16, y: 1.05, z: 0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3761,7 +3761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b64aa7ebf2988b5439bf9c6703814f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoVitoria: {fileID: 1197620091}
+  textoTitulo: {fileID: 1197620091}
   ResetButton: {fileID: 837484993}
   NextLevelButton: {fileID: 394980051}
 --- !u!1 &1680208132

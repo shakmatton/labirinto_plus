@@ -13,19 +13,23 @@ public class GhostController : MonoBehaviour
     [Header("Posição Y")]                                       
     public float alturaY = 1.85f;                               // altura inicial do fantasma em relação ao chão
 
+    public static bool jogoVencido = false;                     // se o jogo não está vencido, fantasmas se movem
+                                                                // variável "static" pertence à classe GhostController, geradora dos objetos fantasma (uma alteração aqui refletirá em todos os prefabs fantasmas).
+
     private void Start()
     {
         transform.position = new Vector3(transform.position.x, alturaY, transform.position.z);          // altura inicial aplicada logo no começo do jogo
     }
 
-    void Update()
+    private void Update()
     {
         MoverFantasma();                                                                // método usado abaixo    
         // SeguirPlayer();                                                              // método alternativo (escolha um dos dois métodos para ser comentado) 
     }
 
-    void MoverFantasma()
+    private void MoverFantasma()
     {
+        if (jogoVencido) return;                                                        // se o jogo está vencido, fantasmas não se movem mais (e as linhas abaixo não são executadas).
      
         Vector3 direcao = player.position - transform.position;                         // vetor que representa a distância entre o player e o inimigo
 

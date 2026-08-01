@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c9c7520395cde4a82a368bd6424efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostController
-  player: {fileID: 0}
+  player: {fileID: 4574922391346416423, guid: 625de9abcdf427a488fe7bfd986c06bb, type: 3}
   velocidade: 2
   distanciaLimiteParaPlayer: 0.5
   alturaY: 1.85

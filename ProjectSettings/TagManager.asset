@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Parede
   - Fantasma
+  - Caixa
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Caixa
   - Water
   - UI
   - 

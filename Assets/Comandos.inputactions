@@ -1,10 +1,20 @@
 {
+    "version": 1,
     "name": "Comandos",
     "maps": [
         {
             "name": "Player",
             "id": "a161c5b2-c315-4149-ae85-2ebbc6faf5bb",
             "actions": [
+                {
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "5aaccb31-9091-4d5d-acbd-226607300e21",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
                 {
                     "name": "Move",
                     "type": "Value",
@@ -88,6 +98,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6abd0ba7-0dc4-428f-819b-91e65031b8c7",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

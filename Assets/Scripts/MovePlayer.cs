@@ -9,6 +9,12 @@ public class MovimentaçãoPlayer : MonoBehaviour
     // Referência ao CharacterController usado para mover o jogador.
     private CharacterController ch;
 
+    // Referência ao BoxCollider do jogador.
+    private BoxCollider boxCollider;
+
+    // Referência ao GameObject que representa a caixa que o jogador pode interagir.
+    private GameObject box = null;
+
     // Referência ao Animator que controla as animações.
     private Animator anim;
 
@@ -18,6 +24,9 @@ public class MovimentaçãoPlayer : MonoBehaviour
     // Valores de entrada do movimento nos eixos X e Z.
     private float movementX;
     private float movementY;
+
+    // Flag que indica se o jogador está segurando a caixa.
+    private bool grabbing = false;
 
     // Velocidade normal de deslocamento.
     public float speed = 5;
@@ -38,6 +47,8 @@ public class MovimentaçãoPlayer : MonoBehaviour
 
         // Obtém o Animator do objeto.
         anim = GetComponent<Animator>();
+
+        boxCollider = GetComponent<BoxCollider>();
     }
 
     public void OnMove(InputAction.CallbackContext ctx)
@@ -64,6 +75,55 @@ public class MovimentaçãoPlayer : MonoBehaviour
             tempSpeed = speed;
         }
     }
+    //Evento que detecta se ha uma caixa na frente do player
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Caixa") && box == null)
+        {
+            box = other.gameObject;
+            Debug.Log("Colidiu com a caixa: " + box.name);
+        }
+    }
+    //Evento que detecta se o player saiu da colisão com a caixa
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == box)
+        {
+            box.layer = 0;
+            box.GetComponent<FixedJoint>().connectedBody = null;
+            box = null;
+            grabbing = false;
+            Debug.Log("Collision OFF " + grabbing);
+        }
+    }
+    //Função que detecta se o player está tentando pegar a caixa
+    public void OnGrab(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            if (box != null)
+            {
+                box.layer = 3;
+                if(box.GetComponent<FixedJoint>() == null)
+                {
+                    box.AddComponent<FixedJoint>();
+                }
+                box.GetComponent<FixedJoint>().connectedBody = GetComponent<Rigidbody>();
+                grabbing = true;
+                Debug.Log("Grabbing the box: " + box.name);
+            }
+        }
+        else if (ctx.canceled)
+        {
+            if (grabbing)
+            {
+                box.layer = 0;
+                box.GetComponent<FixedJoint>().connectedBody = null;
+                grabbing = false;
+                Debug.Log("Released the box: " + box.name);
+            }
+        }
+    }
 
     void Update()
     {
@@ -74,8 +134,8 @@ public class MovimentaçãoPlayer : MonoBehaviour
         // Debug.Log(movement);                                                 // Lembrando que cada Debug.Log descomentado é executado todo frame. Se o jogo roda a 60 FPS, são impressas aproximadamente:
                                                                                 // 60 mensagens de movement por segundo; e 60 mensagens de valorSpeed por segundo. Total: cerca de 120 mensagens por segundo.                                                                                
 
-        // Só gira o modelo se houver movimento.
-        if (movement != Vector3.zero)
+        // Só gira o modelo se houver movimento e n'ao estiver carregando uma caixa.
+        if (movement != Vector3.zero && !grabbing)
         {
             // Calcula a rotação desejada conforme a direção do movimento.
             Quaternion targetRotation = Quaternion.LookRotation(movement);

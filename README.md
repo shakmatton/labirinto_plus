@@ -1,10 +1,10 @@
-# 🎮 Pensamento Computacional (Unity)
+# Pensamento Computacional (Unity)
 
 O curso foi criado para introduzir estudantes, calouros e demais interessados ao desenvolvimento de jogos digitais, abordando desde a utilização da interface da Unity até a criação de projetos completos. Durante as aulas, os participantes desenvolvem conhecimentos em programação, game design e criação de jogos.
 
 ---
 
-## 📚 Sobre o Curso
+## Sobre o Curso
 
 Os principais conteúdos trabalhados são:
 
@@ -19,19 +19,19 @@ Os principais conteúdos trabalhados são:
 
 ---
 
-## 🎯 Objetivo do Repositório
+## Objetivo do Repositório
 
 Disponibilizar o projeto **Labirinto Plus** usado nas aulas, permitindo que os alunos revisem e pratiquem os conteúdos estudados. Além disso, o repositório tem como objetivo apresentar o projeto **Pensamento Computacional (Unity)** à comunidade, compartilhando sua proposta, metodologia e resultados com estudantes e demais interessados no desenvolvimento de jogos digitais.
 
 ---
 
-## 🧩 Projeto Disponível
+## Projeto Disponível
 
 * **Labirinto Plus**
 
 ---
 
-## 🚀 Como Utilizar
+## Como Utilizar
 
 1. Clone ou baixe este repositório.
 2. Abra o projeto utilizando o **Unity Hub**.
@@ -40,7 +40,7 @@ Disponibilizar o projeto **Labirinto Plus** usado nas aulas, permitindo que os a
 
 ---
 
-## 🕹️ Projetos do Pensamento Computacional
+## Projetos do Pensamento Computacional
 
 ### Disponível para Jogar
 
@@ -56,7 +56,7 @@ Disponibilizar o projeto **Labirinto Plus** usado nas aulas, permitindo que os a
 
 ---
 
-## 👥 Equipe
+## Equipe
 
 | Nome | Responsabilidades |
 | --- | --- |
@@ -76,7 +76,7 @@ Disponibilizar o projeto **Labirinto Plus** usado nas aulas, permitindo que os a
 
 ---
 
-## 📬 Contato
+## Contato
 
 ### E-mail
 

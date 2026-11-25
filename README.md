@@ -21,27 +21,22 @@ Os principais conteúdos trabalhados são:
 
 ## 🎯 Objetivo do Repositório
 
-Disponibilizar os exercícios, projetos e materiais de apoio utilizados durante as aulas, permitindo que os alunos revisem e pratiquem os conteúdos estudados. Além disso, o repositório tem como objetivo apresentar o projeto **Pensamento Computacional (Unity)** à comunidade, compartilhando sua proposta, metodologia e resultados com estudantes e demais interessados no desenvolvimento de jogos digitais.
+Disponibilizar o projeto **Labirinto Plus** usado nas aulas, permitindo que os alunos revisem e pratiquem os conteúdos estudados. Além disso, o repositório tem como objetivo apresentar o projeto **Pensamento Computacional (Unity)** à comunidade, compartilhando sua proposta, metodologia e resultados com estudantes e demais interessados no desenvolvimento de jogos digitais.
 
 ---
 
-## 🧩 Exercícios Disponíveis
+## 🧩 Projeto Disponível
 
-* **Transform**
-* **Boliche**
-* **Space Clicker**
+* **Labirinto Plus**
 
 ---
 
 ## 🚀 Como Utilizar
 
-1. Clone ou baixe este repositório:
-   
-   git clone [URL-DO-SEU-REPOSITORIO]
-
+1. Clone ou baixe este repositório.
 2. Abra o projeto utilizando o **Unity Hub**.
 3. Utilize a versão recomendada da Unity (`[Ex: 2022.3.x LTS]`).
-4. Explore os exercícios e projetos disponíveis.
+4. Explore o projeto disponível.
 
 ---
 
@@ -51,7 +46,7 @@ Disponibilizar os exercícios, projetos e materiais de apoio utilizados durante 
 
 | Projeto | Status | Link |
 | --- | --- | --- |
-| **Labirinto 3D** | 🟢 Disponível | [Jogar no itch.io](https://luidi3159.itch.io/labirinto-3d-pensamento-computacional) |
+| **Labirinto 3D (versão extra-oficial)** | 🟢 Disponível | [Jogar no itch.io](https://luidi3159.itch.io/labirinto-3d-pensamento-computacional) |
 
 ### Em Desenvolvimento
 
@@ -103,8 +98,3 @@ Disponibilizar os exercícios, projetos e materiais de apoio utilizados durante 
 ---
 
 *Projeto desenvolvido como parte da iniciativa **Pensamento Computacional (Unity)**, voltada ao ensino de desenvolvimento de jogos digitais por meio de atividades práticas, exercícios e projetos utilizando a Unity.*
-
-```
-Qual é o foco específico desse seu repositório (é um espelho oficial do projeto, um repo só com os seus exercícios/aulas, ou de um jogo específico)? Se quiser, já adapto o texto para você!
-
-```
